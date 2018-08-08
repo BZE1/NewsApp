@@ -31,6 +31,8 @@ import { PageService } from './services/page.service.client';
 // import {FlickrService} from './services/flickr.service.client'
 import {SharedService} from './services/shared.service.client'
 import {AuthGuard} from './services/auth-guard.service';
+import { NewsComponent } from './components/news/news.component';
+import { SplashComponent } from './components/splash/splash.component';
 // import { WidgetHtmlComponent } from './components/widget/widget-edit/widget-html/widget-html.component';
 // import { WidgetTextComponent } from './components/widget/widget-edit/widget-text/widget-text.component';
 
@@ -41,6 +43,8 @@ import {AuthGuard} from './services/auth-guard.service';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
+    NewsComponent,
+    SplashComponent,
     // WebsiteListComponent,
     // WebsiteNewComponent,
     // WebsiteEditComponent,

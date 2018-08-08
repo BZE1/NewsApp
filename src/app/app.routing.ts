@@ -4,6 +4,10 @@ import {AuthGuard} from './services/auth-guard.service';
 import {LoginComponent} from "./components/user/login/login.component";
 import {RegisterComponent} from "./components/user/register/register.component";
 import {ProfileComponent} from "./components/user/profile/profile.component"
+//====================================================================
+import { NewsComponent } from './components/news/news.component';
+import { SplashComponent } from './components/splash/splash.component';
+//====================================================================
 // import { WebsiteListComponent } from './components/website/website-list/website-list.component';
 // import { WebsiteNewComponent } from './components/website/website-new/website-new.component';
 // import { WebsiteEditComponent } from './components/website/website-edit/website-edit.component';
@@ -18,11 +22,12 @@ import {ProfileComponent} from "./components/user/profile/profile.component"
 // Import all other components here 
 
 const APP_ROUTES : Routes = [
-  { path : '', component : LoginComponent},
+  { path : '', component : SplashComponent},
   { path : 'login', component : LoginComponent},
   { path : 'register', component: RegisterComponent},
   { path : 'user' , component: ProfileComponent, canActivate: [AuthGuard]},
-  // { path : 'user/:uid/website' , component: WebsiteListComponent, canActivate: [AuthGuard]},
+  { path : 'user/:uid/news' , component: NewsComponent, canActivate: [AuthGuard]},
+  // { path : 'user/:uid/news' , component: NewsComponent, canActivate: [AuthGuard]},
   // { path : 'user/:uid/website/new' , component: WebsiteNewComponent, canActivate: [AuthGuard]},
   // { path : 'user/:uid/website/:wid' , component: WebsiteEditComponent, canActivate: [AuthGuard]},
   // { path : 'user/:uid/website/:wid/page' , component: PageListComponent, canActivate: [AuthGuard]},

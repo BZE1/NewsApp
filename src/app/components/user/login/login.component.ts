@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
      (user: User) => {
        if(!user) {
          this.errorFlag = true;
+         
        } else {
          this.errorFlag = false;
          this.sharedService.user = user;
