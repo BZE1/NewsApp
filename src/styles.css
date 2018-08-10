@@ -3,8 +3,24 @@ body{
 	padding-bottom: 70px;
 	background-color: white;
     /*background-color: magenta;*/
+
+    /*background-image: url("https://thumbs.gfycat.com/ThickDesertedHarrier-size_restricted.gif");*/
+    /*background-image: url("img_tree.gif"), url("paper.gif");*/
+    /*background-image: url("https://thumbs.gfycat.com/ZestyLoathsomeGermanpinscher-size_restricted.gif"), url("https://www.noupe.com/wp-content/uploads/2017/10/bubblydefault.gif");*/
+
 }
 
+.img_login{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.img_splash{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 button:hover{
 	text-decoration: none;
@@ -28,7 +44,9 @@ button:hover{
     color: white;
 }
 .zx-color{
-    background-color: purple;
+    background-color: green;
+
+    /*background-color: purple;*/
 }
 
 .sw-color-white{
@@ -177,7 +195,7 @@ a:hover{
   background-color: #bff442; 
 }
 #ex_2{
-  background-color: #f48942 ;
+  background-color: #efeda2 ;
   color:red;
 }
 #ex_3{
@@ -190,11 +208,32 @@ a:hover{
 #ex_5{
   background-color: black; 
   color:yellow;   
+  text-align: left;
+
 }
+
+        #ex_5h{
+              background-color: yellow; 
+              color:red;   
+              text-align: center;
+          }
+        .ex_5a{
+              background-color: blue; 
+              color:red;   
+              text-align: left;
+          }
+        .ex_5b{
+              background-color: green; 
+              color:black;   
+              text-align: left;
+          }
+
 #ex_6{
   background-color: #42d7f4;  
 }
 
+
+/*[TEST]*/
 /*[  Desktop  ]*/
 @media screen and (min-width: 400px){
     .wrapper {
@@ -203,6 +242,15 @@ a:hover{
 
     }
 }
+
+/*[GOLD]___________________________________*/
+/*@media screen and (min-width: 400px){
+    .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}*/
 
 .new_image_wrapper{
     position: absolute;

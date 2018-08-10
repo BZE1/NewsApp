@@ -1,37 +1,24 @@
-<div class="zx-nav"  style="text-align:center">
 
+<div class="zx-nav "  style="text-align:center">
 <nav class="navbar navbar-brand navbar-dark fixed-top zx-color">
-
-   
-        <h4 id="zx_Header_color">News App</h4>
-   
+        <h2 id="zx_Header_color">News App</h2>
 
 </nav>
-
-</div>
-
-
-
+</div>  
 <br>
 
 <!--########################################################-->
 <!--#############[        entry Page            ]############-->
 <!--########################################################-->
 
-
-<!--  <button   type="submit" 
-                class="btn btn-primary btn-block">
-                Submit
-                </button> -->
-
 <div style="text-align:center">
-  <!-- <h1>      {{ title }}    </h1> -->
   
-  <img width="300" alt="Giffy Logo" src="https://www.bagotarmsgs.com/s/cc_images/cache_2456834.gif?t=1486917593">
+  <img  class="img_splash" width="300" alt="Giffy Logo" src="https://www.bagotarmsgs.com/s/cc_images/cache_2456834.gif?t=1486917593">
 </div>
 
  <!-- [news]  https://i.giphy.com/media/Mn60irClToFX2/200.gif
  [Moto]  https://i0.wp.com/25.media.tumblr.com/tumblr_lzyhc2WuVX1qkshedo1_500.gif -->
+
 <!--########################################################-->
 <!--#############[          Buttons            ]############-->
 <!--########################################################-->
@@ -43,20 +30,13 @@
                routerLink="login">
                 Login
                 </button>
-                              <!-- routerLink="/user/{{uid}}/website"> -->
+             <!-- routerLink="/user/{{uid}}/website"> -->
   
       <button  type="submit" 
                class="btn btn-primary "
                routerLink="register">
                 Register
                 </button>
-
- <!--      <button   type="submit" 
-               class="btn btn-primary "
-               routerLink="news">
-                News
-                </button> -->
-  
 
 <!--     <button class="btn btn-success"
             (click)="AlertMessage()"
@@ -74,12 +54,14 @@
               class="btn btn-primary" 
               data-container="body" 
               data-toggle="popover" 
-              data-placement="bottom" 
-              data-content="To See More please Login or Register">
-              More News
+              data-placement="bottom"
+              (click)="randomQuote()" 
+              data-content="crap">
+              [ More ]
               </button>
 
-  <!-- class="btn btn-secondary" -->
+        <!-- (click)="randomQuote()" -->
+      <!-- class="btn btn-secondary" -->
 
 </div>
 <!--########################################################-->
@@ -89,12 +71,11 @@
 
 
 </div>
-
-
 <!--########################################################-->
 <!--#############[         social Icons        ]############-->
 <!--########################################################-->
-<div class="zx-center" >
+<!-- <div class="zx-center" > -->
+<div class="img_splash" >
   <div class="container"> 
 
     <span class="button fb">  
@@ -127,44 +108,43 @@
     </span>  
 </div>
 
-
-
 <!--########################################################-->
 <!--#############[         Grids               ]############-->
 <!--########################################################-->
-<div class="container-fluid">
+<div class="container-fluid">  
 
   <div class="wrapper" style="text-align:center">
 
   <div id="ex_1"> 
-      <h3>Personal Motivation</h3>
-      <!-- <h3>{{dynamic}}</h3> -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.
-      </p>
-      <h3>{{ title2 }}</h3>
+      <h1>{{ex_1_header}}</h1>
 
-      <img    width="300" 
+       <img    width="200" 
               alt="Giffy Logo" 
               src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
+      <!-- <h3>{{dynamic}}</h3> -->
+      <h3>{{ex_1_title}}</h3> 
+      <p>{{quick1Body}}</p>
+      <p>------//------//------</p>
+      
+      <p>{{quick2Body}}</p> 
     </div>
 
-
   <div id="ex_2"> 
-      <h3>Get Motivated</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.
-      </p>
-      <h3>{{ title1 }}</h3>
-
+      <h1>{{ex_2_header}}</h1>
       <img    width="300" 
               alt="Giffy Logo" 
               src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
+      <p>{{quoteBody}}
+      </p>
+      <h3>{{ex_2_title}}</h3>
+      
   </div>
 
   <div id="ex_3"> 
-      <h3>Become a Winner</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sd, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.
-      </p>
-      <h3>{{ title3 }}</h3>
+      <h1>{{ex_3_header}}</h1>
+      <!-- <p>{{quick2Body}}
+      </p> -->
+      <h3>{{ex_3_title}}</h3>
 
       <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
                 width="360" 
@@ -175,14 +155,13 @@
                 </iframe>
 </div>
 
-</div> <!-- [end wrapper] -->
-<!-- </div>  -->
+</div> 
 
 <div class="container-fluid">
   
       <div  >
-            <img    alt="Latest News" 
-                    src="http://www.ccsgsupport.com/Icons/Latest%20News%202.gif">
+           <!--  <img    alt="Latest News" 
+                    src="http://www.ccsgsupport.com/Icons/Latest%20News%202.gif"> -->
     <!-- [ Image Resources ] -->
     <!-- https://i0.wp.com/25.media.tumblr.com/tumblr_lzyhc2WuVX1qkshedo1_500.gif -->
     <!-- http://www.ccsgsupport.com/Icons/Latest%20News%202.gif -->
@@ -236,8 +215,6 @@
       </div>
 
 
-
- <!-- ================================================================== -->
 <!-- loopArticle -->
 
       <button      type="button" 
@@ -245,8 +222,6 @@
                    (click)="loopArticle()">
         [ Done ]
       </button>
-
-        <!-- <p>{{test}}</p> -->
         
         <div>
               <ul>
@@ -262,36 +237,29 @@
               </ul>
         </div>   
 
-
 <!-- ================================================================== -->
   
-
       <button      type="button" 
                    class="btn btn-primary" 
                    (click)="getPic()">
         [ Testing ]
       </button>
 
-        <!-- <p>{{test}}</p> -->
-        
         <div *ngFor="let pic of picdata">
-              
+
            <!-- <p>{{pic.title}}</p> -->
            <a href="{{pic.url}}" target="_blank" >Link : [ {{pic.id}} ]</a>
             <!-- <p>{{pic.url}}</p> -->
                
         </div>   
 
-
-
 <!-- https://jsonplaceholder.typicode.com/photos -->
-
-<!-- ================================================================== -->
 </div>
+<!-- ================================================================== -->
+
 
 
 <div class="container-fluid">
-
 <div class="image_wrapper" >
 
 
@@ -299,29 +267,46 @@
 </div>
 
 
+
+
 <div class="wrapper" style="text-align:center">
 
-  <div id="ex_4"> 
-      <h3>Header info</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! d, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. RepellCulpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.</p>
-</div>
+    <div id="ex_4"> 
+        <h3>Header info</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! d, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. RepellCulpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.</p>
+  </div>
 
-  <div id="ex_5"> 
-      <h3>Header info</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.</p>
-</div>
+    <div id="ex_5"> 
+        <h3 id="ex_5h" >Middle Header info</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi </p>
+        <p class="ex_5a">{{injectionTest1}}</p>
+        <p> incidunt dolorem, enim sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore.Nihil aut illo, nisi incidunt dolorem, enim Nihil aut illo, nisi incidunt dolorem, enim sint! Culpa in aliquam</p>
+        <p class="ex_5b" >{{injectionTest2 }}</p>
+        <p> nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero. Illo, soluta sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero. Illo, soluta </p>
+  </div>
 
- <div id="ex_6"> 
-      <h3>Header info</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero. Illo, soluta error beatae eaque iusto sit vel, omnis alias animi sequi odio, magni. Alias deserunt nostrum voluptatem eligendi?</p>
-</div>
+   <div id="ex_6"> 
+        <h3>Header info</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut illo, nisi incidunt dolorem, enim sint! Culpa in error beatae eaque iusto sit vel, omnis alias animi sequi odio, magni. Alias deserunt nostrum voluptatem eligendi?</p>
+  </div>
 
 </div> <!-- [end wrapper] -->
+
 </div>  <!-- [end container fluid] -->
 
 
 
+<div>
+  <br><br>
+      <h2>{{outputDiv}}</h2>
+      <br>
+      <br>
+      <p>My current hero is {{outputDiv}}</p>
 
+      <br>
+      <br>
+      {{testVar}}
+</div>
 
 
 
@@ -342,6 +327,7 @@
 
 <br>
 <br>
+
 <div id="test">
     <!-- <input type="" name=""> -->
     <!-- <input type="text" ngModel="{{inputString}}"> -->
@@ -351,11 +337,10 @@
             type="button">
             SEARCH
             </button>
-
 </div>
 
-<form (ngSubmit)="clickEvent()" #f="ngForm">
 
+<form (ngSubmit)="clickEvent()" #f="ngForm">
     <div class="form-group">
 
             <input  class="form-control" 
@@ -369,13 +354,12 @@
 
 </form>
 
+    <br>
+    <h3>{{output}}</h3>
+    <br>
 
     <br>
-    <h1>{{output}}</h1>
-    <br>
-
-    <br>
-    <h1>{{output1}}</h1> <h1>{{output2}}</h1>
+    <h3>{{output1}}</h3> <h3>{{output2}}</h3>
     <p>{{output3}}</p>
     <br>
 
@@ -406,10 +390,17 @@
 
             <input  class="form-control" 
                 type="text" 
-                name="inputString2" 
+                name="inputCity" 
                 required 
-                [(ngModel)] = "inputString2" 
-                placeholder="Whats the weather like">
+                [(ngModel)] = "inputCity" 
+                placeholder="Imput your City">
+            <br>
+              <input  class="form-control" 
+                type="text" 
+                name="inputState" 
+                required 
+                [(ngModel)] = "inputState" 
+                placeholder="Input your State ex : Ma">
       </div>
 
 </form>
@@ -417,21 +408,23 @@
 
     <hr>
     <br>
-    <h1>{{weather}}</h1>
+<!--     <h1>{{weather}}</h1>
     <br>
 
     <br>
     <h1>{{weather1}}</h1> <h1>{{weather2}}</h1>
     <h2><b>{{weather3}}</b></h2>
+    <br> -->
+
+<br>
+    <h3>{{outputCity}}</h3>
     <br>
-    <h1>{{weather_conditions}}</h1>
+    <h3>{{outputState}}</h3>
+    <br>
+    <h3>{{weather_conditions}}</h3>
     <br>
     <br>
 
-   <!--  <div *ngFor = "let them of people" >
-      <p></p>
- -->
-    <!-- </div> -->
 
 
 
@@ -455,7 +448,7 @@
                routerLink="/login">
                 Login
                 </button>
-                              <!-- routerLink="/user/{{uid}}/website"> -->
+                              <!-- routerLink="/user/{{uid}}/website">
   
       <button   type="submit" 
                class="btn btn-primary "
@@ -474,4 +467,5 @@
 
   
 </div>
+-->
 

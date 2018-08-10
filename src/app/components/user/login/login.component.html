@@ -1,9 +1,14 @@
 <div class="container-fluid animate-fading">
+
 	<h1>Login</h1>
 	<div *ngIf="errorFlag" class="alert alert-danger">Invalid username or password</div>
 
+	<div>
+		<img class="img_login center" style="width:50%;"
+		src="http://www.noworrynotension.com/SignIn/assets/images/user-icon-png-pnglogocom.png">
+	</div>
 
-
+	<br>
 	<form (ngSubmit)="login()" #f="ngForm">
 		<div class="form-group">
 			<input class="form-control" type="text" name="username" placeholder="Username" required ngModel #username="ngModel">
@@ -17,8 +22,16 @@
 
 
 		<span class="alert" *ngIf="password.invalid && password.touched">Please enter password!</span>
-		<button class="btn btn-primary btn-block" [disabled]="f.invalid" type="submit">Login</button>
-		<button class="btn btn-success btn-block" routerLink="/register">Register</button>
+		
+		<br>
+		<br>
+		<br>
+		<button class="btn btn-success btn-block" [disabled]="f.invalid" type="submit">Login</button>
+
+		<button class="btn btn-primary btn-block" routerLink="/register">Register</button>
+
+		<!-- <button class="btn btn-primary btn-block" [disabled]="f.invalid" type="submit">Login</button> -->
+		<button class="btn btn-danger btn-block" routerLink="/">Cancel</button>
 
 		
 	</form>

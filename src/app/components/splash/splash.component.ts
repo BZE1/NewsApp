@@ -4,6 +4,8 @@ import { Http, Response} from '@angular/http'
 import { map } from "rxjs/operators";
 import { NgForm } from '@angular/forms';
 import { ViewChild } from '@angular/core';
+
+// import { NewsService } from '../../services.news.service.client';
 //============================================================
 declare var $: any;
 
@@ -21,21 +23,45 @@ export class SplashComponent implements OnInit {
 
   constructor(private http: Http) { }
 
+  ex_1_header: string;
+  ex_2_header: string;
+  ex_3_header: string;
+
+  ex_1_title: string;
+  ex_2_title: string;
+  ex_3_title: string;
+
+
   ngOnInit() {
   	$(function () {
   		$('[data-toggle="popover"]').popover()
 	})
+
+  	this.quickQuote();
+  	this.divTest();
+
+
+  	this.ex_1_header = "ex_1_header";
+  	this.ex_2_header = "ex_2_header";
+  	this.ex_3_header = "ex_3_header";
+  	this.ex_1_title = "ex_1_title";
+  	this.ex_2_title = 'ex_2_title';
+  	this.ex_3_title = 'ex_3_title';
+
+  	console.log("Function = ngOnInit");
+
   }
 
 
 
 // ====================working====================
 
-	picdata: any:
+	picdata: any;
 	getPic(){
 		this.http.get('https://jsonplaceholder.typicode.com/photos' )
 			.subscribe (
 				(res:Response) => {
+				console.log("Function = getPic");
 				// console.log ('[In Function]');
 				 this.picdata = res.json();
 				 // console.log(this.picdata);
@@ -43,11 +69,13 @@ export class SplashComponent implements OnInit {
 				})
 	}
 
+
 // ====================working====================
+	
 
 
 
-
+// ====================working====================
 
 
 // https://jsonplaceholder.typicode.com/users
@@ -61,7 +89,7 @@ export class SplashComponent implements OnInit {
   		this.http.get('https://jsonplaceholder.typicode.com/users' )
 			.subscribe (
 				(res:Response) => {
-				console.log ('[In Function]');
+				console.log("Function = loopArticle");
 				 this.testdata = res.json();
 				 console.log(this.testdata);
 					 // this.test = testdata[3].name;
@@ -80,20 +108,20 @@ export class SplashComponent implements OnInit {
 
 
   AlertMessage (){
-  	
+  	console.log("Function = AlertMessage");
   	console.log ( 'alert');
   }
 
 
-  quoteBody : 		any;
-  quotedata:				any;
+  quoteBody : 	any;
+  quotedata:	any;
 
   	randomQuote(){
 
   		this.http.get ('https://talaikis.com/api/quotes/random/' )
 			.subscribe (
 				(res:Response) => {
-				console.log ('[HERE]');
+				console.log("Function = randomQuote");
 				 const quotedata = res.json();
 				 this.quoteBody = quotedata.quote;
 				})
@@ -101,6 +129,39 @@ export class SplashComponent implements OnInit {
 
   		
   		// {{ breakingNews}}
+  		// https://talaikis.com/api/quotes/random/
+  	}
+
+
+  	quick1Body : 	any;
+  	quick1data:		any;
+  	quick2Body : 	any;
+  	quick2data:		any;
+
+  	quickQuote(){
+
+  		this.http.get ('https://talaikis.com/api/quotes/random/' )
+			.subscribe (
+				(res:Response) => {
+				// console.log ('[HERE]');
+				console.log("Function = quickQuote 1");
+				 const quick1data = res.json();
+				 this.quick1Body = quick1data.quote;
+				 console.log (this.quick1Body);
+				})
+  		
+		this.http.get ('https://talaikis.com/api/quotes/random/' )
+			.subscribe (
+				(res:Response) => {
+				// console.log ('[HERE-2]');
+				console.log("Function = quickQuote 2");
+				 const quick2data = res.json();
+				 this.quick2Body = quick2data.quote;
+				 console.log (this.quick2Body);
+				})
+
+
+  		// {{ quickBody}}
   		// https://talaikis.com/api/quotes/random/
   	}
 
@@ -120,13 +181,11 @@ export class SplashComponent implements OnInit {
 
 	clickEvent(){
 		// output = this.inputString.value;
-		console.log("Space clicked");
-
+		console.log("Function = clickEvent");
 		this.inputString = this.registerForm.value.inputString;
-
 		console.log("[1]" + this.inputString);
 
-		this.output = this.inputString;
+		this.output = 'You Entered : ' + this.inputString;
 
 
 		this.http.get ('http://api.open-notify.org/astros.json' )
@@ -143,6 +202,69 @@ export class SplashComponent implements OnInit {
 
 
 
+	outputH1tag: any;
+	outputPtag:	any;
+	outputDiv:	any;
+	testVar: any;
+
+	injectionTest1: string;
+	injectionTest2: string;
+
+	divTest(){
+
+		this.outputH1tag = "my name is";
+		this.outputPtag	= "Chris";
+
+		this.outputDiv = this.outputH1tag + this.outputPtag;
+	 
+	 	this.testVar = `<h1> hi there !! </h1>`;
+
+	 	this.injectionTest1 = " [[ string 1 ]] sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero.";
+	 	this.injectionTest2 = " [[ string 2 ]] aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero. Illo, soluta  ";
+
+	 	// this.outputDiv: 	`
+	  //   <h1>{{outputH1tag}}</h1>
+	  //   <p>{{outputPtag}}</p>
+	 	// 	 `;
+	}
+
+
+
+
+
+// Here ===============================================
+// 	weather : 		string;
+//   	weather1 : 		any;
+//   	weather2 : 		any;
+//   	weather3 : 		any;
+//   	inputString2 : 	string;
+//    	weatherJSON:	any;
+// 	// crapyWeather: 	string;
+// 	weather_conditions: string;
+  	
+
+//   	crapyWeather = "Here comes the rain again";
+
+
+// 	GetWeather(){
+// 		console.log("Function = GetWeather");
+// 		console.log("[1]" + this.inputString2);
+// 		this.weather = this.inputString2;
+
+// 		this.http.get ('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nashua%2Cnh%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys' )
+// 			.subscribe (
+// 				(res:Response) => {
+// 				 const weatherJSON = res.json();
+// 				 console.log (weatherJSON);
+// 				 this.weather1 = weatherJSON.query.created;
+// 				 this.weather2 = weatherJSON.query.results.channel.description;
+// 				 this.weather3 = this.crapyWeather;
+// 				 this.weather_conditions = weatherJSON.query.results.channel.item.title;
+// 				})
+// 	}
+// to Here ==============================================
+
+
 	weather : 		string;
   	weather1 : 		any;
   	weather2 : 		any;
@@ -151,36 +273,40 @@ export class SplashComponent implements OnInit {
    	weatherJSON:	any;
 	// crapyWeather: 	string;
 	weather_conditions: string;
-  	
 
-  	crapyWeather = "Here comes the rain again";
 
+	inputCity: any;
+	inputState: any;
+	outputCity: any;
+	outputState: any;
 
 	GetWeather(){
-		// output = this.inputString.value;
-		console.log("Weather clicked");
+		console.log("Function = GetWeather");
+		console.log("[city :]" + this.inputCity);
+		console.log("[state :]" + this.inputState);
 
-		// this.inputString2 = this.weatherForm.value.inputString2;
+		this.outputCity = 'City: ' + this.inputCity;
+		this.outputState = 'State: ' + this.inputState;
 
-		console.log("[1]" + this.inputString2);
-
-		this.weather = this.inputString2;
-
-
-		this.http.get ('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nashua%2Cnh%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys' )
+		this.http.get ('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'+this.inputCity+'%2C'+this.inputState+'%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys' )
 			.subscribe (
 				(res:Response) => {
-
 				 const weatherJSON = res.json();
 				 console.log (weatherJSON);
-				 this.weather1 = weatherJSON.query.created;
-				 this.weather2 = weatherJSON.query.results.channel.description;
-				 this.weather3 = this.crapyWeather;
+				 // this.weather1 = weatherJSON.query.created;
+				 // this.weather2 = weatherJSON.query.results.channel.description;
+				 // this.weather3 = this.crapyWeather;
 				 this.weather_conditions = weatherJSON.query.results.channel.item.title;
+				 console.log (this.weather_conditions);
 				})
 	}
-
 	
+
+
+
+
+
+
 
 
 
