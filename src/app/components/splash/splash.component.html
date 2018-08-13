@@ -1,171 +1,101 @@
 
 <div class="zx-nav "  style="text-align:center">
 <nav class="navbar navbar-brand navbar-dark fixed-top zx-color">
-        <h2 id="zx_Header_color">News App</h2>
+        <h2 id="zx_Header_color">News Splash Page</h2>
+
+
+<div class="container">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+    <button type="button" class="btn btn-info" routerLink="login"  >
+    Login</button>
+    <button type="button" class="btn btn-info" routerLink="register">
+    Register</button>
+    <button type="button" class="btn btn-info" routerLink="user/:uid/news">
+    News</button>
+    <button type="button" class="btn btn-info">Links</button>
+    <button type="button" class="btn btn-info">About</button>
+    
+
+    <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        [ More ]
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" routerLink="register">Register</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
 
 </nav>
 </div>  
-<br>
 
 <!--########################################################-->
 <!--#############[        entry Page            ]############-->
 <!--########################################################-->
 
-<div style="text-align:center">
-  
-  <img  class="img_splash" width="300" alt="Giffy Logo" src="https://www.bagotarmsgs.com/s/cc_images/cache_2456834.gif?t=1486917593">
-</div>
+<div class="container">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 
- <!-- [news]  https://i.giphy.com/media/Mn60irClToFX2/200.gif
- [Moto]  https://i0.wp.com/25.media.tumblr.com/tumblr_lzyhc2WuVX1qkshedo1_500.gif -->
+    <button type="button" class="btn btn-info" routerLink="login"  >
+    Login</button>
+    <button type="button" class="btn btn-info" routerLink="register">
+    Register</button>
+    <button type="button" class="btn btn-info" routerLink="user/:uid/news">
+    News</button>
+    <button type="button" class="btn btn-info">Links</button>
+    <button type="button" class="btn btn-info">About</button>
+    
 
-<!--########################################################-->
-<!--#############[          Buttons            ]############-->
-<!--########################################################-->
-
-<div class="zx-center" style="text-align:center">
- 
-     <button   type="submit" 
-               class="btn btn-primary "
-               routerLink="login">
-                Login
-                </button>
-             <!-- routerLink="/user/{{uid}}/website"> -->
-  
-      <button  type="submit" 
-               class="btn btn-primary "
-               routerLink="register">
-                Register
-                </button>
-
-<!--     <button class="btn btn-success"
-            (click)="AlertMessage()"
-            routerLink="/">
-            News
-            </button>
-
- <div    *ngIf="errorFlag" 
-      class="alert alert-danger">
-      To See More please Login or Register
+    <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        [ More ]
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" routerLink="register">Register</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+       
       </div>
-  -->
-
-    <button   type="button" 
-              class="btn btn-primary" 
-              data-container="body" 
-              data-toggle="popover" 
-              data-placement="bottom"
-              (click)="randomQuote()" 
-              data-content="crap">
-              [ More ]
-              </button>
-
-        <!-- (click)="randomQuote()" -->
-      <!-- class="btn btn-secondary" -->
-
-</div>
-<!--########################################################-->
-<!--#############[          Testing            ]############-->
-<!--########################################################-->
-<div id="zx-logo-youtube">
-
-
-</div>
-<!--########################################################-->
-<!--#############[         social Icons        ]############-->
-<!--########################################################-->
-<!-- <div class="zx-center" > -->
-<div class="img_splash" >
-  <div class="container"> 
-
-    <span class="button fb">  
-            <a href="http://facebook.com"target="_blank">
-              <img src="http://png-1.findicons.com/files/icons/2052/social_network/32/facebook.png" 
-                    alt=""
-                    height="30"
-                    width="30">
-              Like It
-              </a>  
-    </span> 
-
-    <span class="button twit"> 
-
-           <a href="http://twitter.com"target="_blank">
-            <img src="http://png-4.findicons.com/files/icons/2192/flavour_extended/48/  twitter_standing.png"   alt="">
-            Tweet It
-            </a>  
-    </span>  
-  
-    <span class="button mail">
-
-         <a href="https://www.google.com/gmail/about/#"target="_blank">
-            <img    src="http://png-1.findicons.com/files/icons/1696/once/48/mail.png" 
-                    alt=""
-                    height="30"
-                    width="30">
-                Email
-                </a>  
-    </span>  
-</div>
-
-<!--########################################################-->
-<!--#############[         Grids               ]############-->
-<!--########################################################-->
-<div class="container-fluid">  
-
-  <div class="wrapper" style="text-align:center">
-
-  <div id="ex_1"> 
-      <h1>{{ex_1_header}}</h1>
-
-       <img    width="200" 
-              alt="Giffy Logo" 
-              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
-      <!-- <h3>{{dynamic}}</h3> -->
-      <h3>{{ex_1_title}}</h3> 
-      <p>{{quick1Body}}</p>
-      <p>------//------//------</p>
-      
-      <p>{{quick2Body}}</p> 
     </div>
-
-  <div id="ex_2"> 
-      <h1>{{ex_2_header}}</h1>
-      <img    width="300" 
-              alt="Giffy Logo" 
-              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
-      <p>{{quoteBody}}
-      </p>
-      <h3>{{ex_2_title}}</h3>
-      
   </div>
-
-  <div id="ex_3"> 
-      <h1>{{ex_3_header}}</h1>
-      <!-- <p>{{quick2Body}}
-      </p> -->
-      <h3>{{ex_3_title}}</h3>
-
-      <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-                width="360" 
-                height="235" 
-                frameborder="0"
-                allowfullscreen
-                allow="autoplay; encrypted-media">
-                </iframe>
 </div>
 
-</div> 
+<!--########################################################-->
+<!--#############[        CARDs              ]############-->
+<!--########################################################-->
+<div class="container">
 
-<div class="container-fluid">
-  
-      <div  >
-           <!--  <img    alt="Latest News" 
-                    src="http://www.ccsgsupport.com/Icons/Latest%20News%202.gif"> -->
-    <!-- [ Image Resources ] -->
-    <!-- https://i0.wp.com/25.media.tumblr.com/tumblr_lzyhc2WuVX1qkshedo1_500.gif -->
-    <!-- http://www.ccsgsupport.com/Icons/Latest%20News%202.gif -->
-      </div>
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+      <button type="button" class="btn btn-warning">Button # 1</button>
+      <button type="button" class="btn btn-warning">Button # 2</button>
+      <button type="button" class="btn btn-warning">Button # 3</button>
+
+    </div>
+    <div class="btn-group mr-2" role="group" aria-label="Second group">
+      <button type="button" class="btn btn-warning">Button # 4</button>
+      <button type="button" class="btn btn-warning">Button # 5</button>
+      <button type="button" class="btn btn-warning">Button # 6</button>
+      
+    </div>
+    <div class="btn-group" role="group" aria-label="Third group">
+      <button type="button" class="btn btn-warning">Button # 7</button>
+      <button type="button" class="btn btn-warning">Button # 8</button>
+      <button type="button" class="btn btn-warning">Button # 9</button>
+    </div>
+     
+  </div>
+</div>
 
 <!--########################################################-->
 <!--#############[         Random Quote        ]############-->
@@ -222,6 +152,16 @@
                    (click)="loopArticle()">
         [ Done ]
       </button>
+          
+
+       <div *ngFor="let pic of parsedPicData">
+
+           <!-- <p>{{pic.title}}</p> -->
+           <a href="{{pic.url}}" target="_blank" >
+           Item: {{pic.id}}   Title:  {{pic.title}}</a>
+            <!-- <p>{{pic.url}}</p> -->
+               
+        </div>   
         
         <div>
               <ul>
@@ -237,7 +177,249 @@
               </ul>
         </div>   
 
+
 <!-- ================================================================== -->
+<!--########################################################-->
+<!--#############[        entry Page            ]############-->
+<!--########################################################-->
+
+
+<div class="container-fluid">
+ 
+  <div class="row">
+        <div class="col-sm">
+          <h3>col-sm</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur inventore ea molestiae reiciendis, obcaecati aperiam dolorem deleniti ullam dolorum officia ratione quas aliquid ipsa provident id assumenda dignissimos. Quo.</p>
+        
+      </div>
+        <div class="col-sm">
+          <h3>col-sm</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
+        </p>
+      </div>
+        <div class="col-sm">
+          <h3>col-sm</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur alias.</p>
+        <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
+                      width="360" 
+                      height="235" 
+                      frameborder="0"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media">
+                      </iframe>
+      </div>
+</div>
+
+<div class="row">
+      <div class="col-sm-8">
+        <h3>col-sm-8</h3>
+        <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
+                    width="360" 
+                    height="235" 
+                    frameborder="0"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media">
+                    </iframe>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam illum alias, totam quo delectus sapiente quisquam animi dicta. Sequi est dolorum repellat ipsam, ipsum mollitia nobis! Sequi tenetur perspiciatis odit. ipsum dolor sit amet, consectetur adipisicing elit. Pariatur porro perspiciatis repellendus eaque. A sed beatae soluta, doloribus, pariatur necessitatibus. Nemo laudantium labore quia excepturi nihil vero nulla odio, optio. ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eligendi modi nulla ipsa quae fugiat non illum numquam, dolor ipsam hic ut ad fuga rem error architecto doloribus harum, debitis.</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>col-sm-4</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, hic illo accusantium maxime voluptatibus architecto officiis deserunt dolore veritatis ab odio, non explicabo sapiente, molestiae asperiores ex quo neque optio. ipsum dolor sit amet, consectetur adipisicing elit. Illum numquam totam quia, dolore, velit eius iure nisi odio quo aut impedit libero dignissimos ullam, mollitia exercitationem dolorum dolor delectus quidem. ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quos dolorem, aliquid! Reiciendis voluptatum doloremque nulla praesentium molestias qui iure dolorum modi rerum magnam nam perferendis quidem ad, voluptates reprehenderit!</p>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-8">
+        <h3>col-sm-8</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eligendi modi nulla ipsa quae fugiat non illum numquam, dolor ipsam hic ut ad fuga rem error architecto doloribus harum, debitis.</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>col-sm-4</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quos dolorem, aliquid! Reiciendis voluptatum doloremque nulla praesentium molestias qui iure dolorum modi rerum magnam nam perferendis quidem ad, voluptates reprehenderit!</p>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm">
+        <h3>col-sm</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rem nesciunt et commodi, mollitia sequi delectus amet rerum vitae est beatae saepe aspernatur ut quam porro perferendis blanditiis, dolore alias.</p>
+    </div>
+      <div class="col-sm">
+        <h3>col-sm</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
+      </p>
+    </div>
+      <div class="col-sm">
+        <h3>col-sm</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima temporibus sequi praesentium unde delectus aut animi itaque accusamus suscipit incidunt rem id minus, eos sed ab similique voluptate modi distinctio.</p>
+    </div>
+  </div>
+
+
+</div> <!-- end container -->
+<!-- ================================================================== -->
+<!--########################################################-->
+<!--#############[        entry Page            ]############-->
+<!--########################################################-->
+
+<div style="text-align:center">
+  
+  <img  class="img_splash" width="300" alt="Giffy Logo" src="https://www.bagotarmsgs.com/s/cc_images/cache_2456834.gif?t=1486917593">
+</div>
+
+ <!-- [news]  https://i.giphy.com/media/Mn60irClToFX2/200.gif
+ [Moto]  https://i0.wp.com/25.media.tumblr.com/tumblr_lzyhc2WuVX1qkshedo1_500.gif -->
+
+<!--########################################################-->
+<!--#############[          Buttons            ]############-->
+<!--########################################################-->
+
+<!-- <div class="zx-center" style="text-align:center">
+ 
+     <button   type="submit" 
+               class="btn btn-primary "
+               routerLink="login">
+                Login
+                </button> -->
+             <!-- routerLink="/user/{{uid}}/website"> -->
+  
+    <!--   <button  type="submit" 
+               class="btn btn-primary "
+               routerLink="register">
+                Register
+                </button> -->
+
+<!--     <button class="btn btn-success"
+            (click)="AlertMessage()"
+            routerLink="/">
+            News
+            </button>
+
+ <div    *ngIf="errorFlag" 
+      class="alert alert-danger">
+      To See More please Login or Register
+      </div>
+  -->
+<div>
+    <button   type="button" 
+              class="btn btn-primary" 
+              data-container="body" 
+              data-toggle="popover" 
+              data-placement="bottom"
+              (click)="randomQuote()" 
+              data-content="crap what now!">
+              [ Popover ]
+              </button>
+</div>
+        <!-- (click)="randomQuote()" -->
+      <!-- class="btn btn-secondary" -->
+
+
+<!--########################################################-->
+<!--#############[          Testing            ]############-->
+<!--########################################################-->
+<div id="zx-logo-youtube">
+
+
+</div>
+<!--########################################################-->
+<!--#############[         social Icons        ]############-->
+<!--########################################################-->
+<!-- <div class="zx-center" > -->
+<div class="img_splash" >
+  <div class="container"> 
+
+    <span class="button fb">  
+            <a href="http://facebook.com"target="_blank">
+              <img src="http://png-1.findicons.com/files/icons/2052/social_network/32/facebook.png" 
+                    alt=""
+                    height="30"
+                    width="30">
+              Like It
+              </a>  
+    </span> 
+
+    <span class="button twit"> 
+
+           <a href="http://twitter.com"target="_blank">
+            <img src="http://png-4.findicons.com/files/icons/2192/flavour_extended/48/  twitter_standing.png"   alt="">
+            Tweet It
+            </a>  
+    </span>  
+  
+    <span class="button mail">
+
+         <a href="https://www.google.com/gmail/about/#"target="_blank">
+            <img    src="http://png-1.findicons.com/files/icons/1696/once/48/mail.png" 
+                    alt=""
+                    height="30"
+                    width="30">
+                Email
+                </a>  
+    </span>  
+</div>
+
+<!--########################################################-->
+<!--#############[         Grids               ]############-->
+<!--########################################################-->
+<div class="container-fluid">  
+
+  <div class="wrapper" style="text-align:center">
+
+
+  <div id="ex_1"> 
+      <h1>{{ex_1_header}}</h1>
+
+       <img    width="200" 
+              alt="Giffy Logo" 
+              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
+      <!-- <h3>{{dynamic}}</h3> -->
+      <h3>{{ex_1_title}}</h3> 
+      <p>{{quick1Body}}</p>
+      <p>------//------//------</p>
+      
+      <p>{{quick2Body}}</p> 
+    </div>
+
+  <div id="ex_2"> 
+      <h1>{{ex_2_header}}</h1>
+      <img    width="300" 
+              alt="Giffy Logo" 
+              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
+      <p>{{quoteBody}}
+      </p>
+      <h3>{{ex_2_title}}</h3>
+      
+  </div>
+
+  <div id="ex_3"> 
+      <h1>{{ex_3_header}}</h1>
+      <!-- <p>{{quick2Body}}
+      </p> -->
+      <h3>{{ex_3_title}}</h3>
+
+      <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
+                width="360" 
+                height="235" 
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; encrypted-media">
+                </iframe>
+</div>
+
+</div> 
+
+<div class="container-fluid">
+  
+      <div  >
+           <!--  <img    alt="Latest News" 
+                    src="http://www.ccsgsupport.com/Icons/Latest%20News%202.gif"> -->
+    <!-- [ Image Resources ] -->
+    <!-- https://i0.wp.com/25.media.tumblr.com/tumblr_lzyhc2WuVX1qkshedo1_500.gif -->
+    <!-- http://www.ccsgsupport.com/Icons/Latest%20News%202.gif -->
+      </div>
+
+
   
       <button      type="button" 
                    class="btn btn-primary" 
@@ -245,10 +427,11 @@
         [ Testing ]
       </button>
 
-        <div *ngFor="let pic of picdata">
+        <div *ngFor="let pic of parsedPicData">
 
            <!-- <p>{{pic.title}}</p> -->
-           <a href="{{pic.url}}" target="_blank" >Link : [ {{pic.id}} ]</a>
+           <a href="{{pic.url}}" target="_blank" >
+           Item: {{pic.id}}   Title:  {{pic.title}}</a>
             <!-- <p>{{pic.url}}</p> -->
                
         </div>   

@@ -56,7 +56,9 @@ export class SplashComponent implements OnInit {
 
 // ====================working====================
 
-	picdata: any;
+	picdata: any[];
+	parsedPicData: any[] = [];
+
 	getPic(){
 		this.http.get('https://jsonplaceholder.typicode.com/photos' )
 			.subscribe (
@@ -64,10 +66,24 @@ export class SplashComponent implements OnInit {
 				console.log("Function = getPic");
 				// console.log ('[In Function]');
 				 this.picdata = res.json();
-				 // console.log(this.picdata);
-				
-				})
+				 // console.log(res.json());
+				for(let i=0; i< 10; i++) {
+					console.log(i);
+						this.parsedPicData.push(this.picdata[i]);
+				}
+				}	
+				)
 	}
+
+	// parsePicData10(start: number, end: number){
+	// 	let currentPicdata = []
+	// 	for(let i=0; i< this.picdata.length; i++) {
+	// 		if(i >= start && i <= end) {
+	// 			currentPicdata.push(this.picdata[i]);
+	// 		}
+	// 	}
+	// 	return currentPicdata;
+	// }
 
 
 // ====================working====================
@@ -92,15 +108,7 @@ export class SplashComponent implements OnInit {
 				console.log("Function = loopArticle");
 				 this.testdata = res.json();
 				 console.log(this.testdata);
-					 // this.test = testdata[3].name;
-					 // this.test1 = testdata[4].name;
-
-					 // this.loop = testdata[].name;
-
-					 // console.log (testdata[3].name);
-					 // console.log (testdata[4].name);
-
-				 // this.output2 = rawJSON.people[0].craft;
+			
 				})
 	}
 

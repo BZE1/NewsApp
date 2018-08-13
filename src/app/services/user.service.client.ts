@@ -35,6 +35,7 @@ export class UserService {
 
 
   logout() {
+    console.log ("logout");
     this.options.withCredentials = true;
     return this.http.post(this.baseUrl + '/api/logout', '', this.options).pipe(map(
      (res: Response) => {

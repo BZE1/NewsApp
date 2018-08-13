@@ -1,21 +1,36 @@
-<p>
-  news works!
-</p>
 
 <div class="zx-nav"  style="text-align:center">
 <nav class="navbar navbar-brand navbar-dark fixed-top zx-color">
-
    
-        <h4 id="zx_Header_color">Motivation App</h4>
-        <h5 id="zx_Header_color">Your Login In</h5>
+        <h4 id="zx_Header_color">Main News Page</h4>
    
-				<button class="btn btn-success"
-						(click)="logout()"
-						routerLink="/">
-						Logout
-						</button>
+<div class="container">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 
-		<!-- <a (click)="logout()" class="btn btn-danger btn-block" >Logout</a> -->
+    <button type="button" class="btn btn-info" routerLink="login">    Login</button>
+    <button type="button" class="btn btn-info" routerLink="register">    Register</button>
+    <button type="button" class="btn btn-info" routerLink="user/:uid/news">    News</button>
+    <button type="button" class="btn btn-info">Links</button>
+    <button type="button" class="btn btn-info">About</button>
+    <button type="button" class="btn btn-warning"  (click)="logout()"routerLink="/">Logout</button>
+    <button type="button" class="btn btn-warning" routerLink="/user">Profile</button>
+    
+    <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        [ More ]
+      </button>
+      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+        <a class="dropdown-item" routerLink="register">Register</a>
+        <a class="dropdown-item" href="#">Dropdown link</a>
+       
+      </div>
+    </div>
+  </div>
+</div>  
+	
 </nav>
 
 </div>
@@ -24,21 +39,46 @@
 
 <br>
 
-<!--########################################################-->
-<!--#############[        entry Page            ]############-->
-<!--########################################################-->
+
 
 
 
 <div style="text-align:center">
   <!-- <h1>      {{ title }}    </h1> -->
-  <img width="300" alt="Center Image" src="https://kimbersoft.com/PLR/GrowthMindset/RedArrow.gif">
+ <!--  <img width="300" alt="Center Image" src="https://kimbersoft.com/PLR/GrowthMindset/RedArrow.gif">
   <br>
-  <img width="200" height="200" alt="Center Image" src="https://i.giphy.com/media/3ohs88bcBbid83GaIg/source.gif">
+  <img width="200" height="200" alt="Center Image" src="https://i.giphy.com/media/3ohs88bcBbid83GaIg/source.gif"> -->
 
 
   <!-- <img width="300" alt="Center Image" src="http://the-secret-to-success.org/wp-content/uploads/2010/08/Key-to-Success.gif"> -->
 
+</div>
+
+<!--########################################################-->
+<!--#############[        CARDs              ]############-->
+<!--########################################################-->
+<div class="container">
+
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+      <button type="button" class="btn btn-warning">Button # 1</button>
+      <button type="button" class="btn btn-warning">Button # 2</button>
+      <button type="button" class="btn btn-warning">Button # 3</button>
+
+    </div>
+    <div class="btn-group mr-2" role="group" aria-label="Second group">
+      <button type="button" class="btn btn-warning">Button # 4</button>
+      <button type="button" class="btn btn-warning">Button # 5</button>
+      <button type="button" class="btn btn-warning">Button # 6</button>
+      
+    </div>
+    <div class="btn-group" role="group" aria-label="Third group">
+      <button type="button" class="btn btn-warning">Button # 7</button>
+      <button type="button" class="btn btn-warning">Button # 8</button>
+      <button type="button" class="btn btn-warning">Button # 9</button>
+    </div>
+     
+  </div>
 </div>
 
 <!--########################################################-->
@@ -91,6 +131,131 @@
                 </a>  
     </span>  
 </div>
+
+
+
+<!--########################################################-->
+<!--#############[        entry Page            ]############-->
+<!--########################################################-->
+
+
+<div>
+	  <button      type="button" 
+                   class="btn btn-primary" 
+                   (click)="getNewsSports()">
+        			[ News Test]
+      				</button>
+     <div>
+	<!-- <div *ngFor="let news of parsedNewsData"> -->
+	<div *ngFor="let news of newsData">
+          
+          <!--  <a href="{{news.url}}" target="_blank" >
+           Item: {{news.items.title}}   Title:  {{news.title}}</a> -->
+          
+          
+          	<!-- <h3>Title: {{news.items.title}}</h3> 
+          	<p>description: {{news.title.description}}</p> -->
+
+         <!--  	<h3>{{news.title}}</h3>
+               <p>{{news.description}}</p> -->
+    </div>   
+
+
+	      <!--   <div>
+	              <ul>
+	                <li *ngFor="let item of testdata">
+	                  <p><b>Name : {{item.name}}</b></p>
+	                  <p>Username : {{item.username}}</p>
+	                  <p>Email :  {{item.email}}</p>
+	                  <p>Website:  {{item.website}}</p>
+	                  <p>Info:  {{item.company.catchPhrase}}</p>
+	                  <p>LAT :  {{item.address.geo.lat}}</p>
+	                  <p>LNG:  {{item.address.geo.lng}}</p>
+	                </li>
+	              </ul>
+	        </div>    -->
+</div>
+
+<!--########################################################-->
+
+<!--########################################################-->
+<!--#############[         social Icons        ]############-->
+<!--########################################################-->
+
+
+<div class="container-fluid">
+ 
+  <div class="row">
+        <div class="col-sm">
+          <h3>col-sm</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur inventore ea molestiae reiciendis, obcaecati aperiam dolorem deleniti ullam dolorum officia ratione quas aliquid ipsa provident id assumenda dignissimos. Quo.</p>
+        
+      </div>
+        <div class="col-sm">
+          <h3>col-sm</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
+        </p>
+      </div>
+        <div class="col-sm">
+          <h3>col-sm</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur alias.</p>
+        <!-- <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
+                      width="360" 
+                      height="235" 
+                      frameborder="0"
+                      allowfullscreen
+                      allow="autoplay; encrypted-media">
+                      </iframe> -->
+      </div>
+</div>
+
+<div class="row">
+      <div class="col-sm-8">
+        <h3>col-sm-8</h3>
+       <!--  <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
+                    width="360" 
+                    height="235" 
+                    frameborder="0"
+                    allowfullscreen
+                    allow="autoplay; encrypted-media">
+                    </iframe> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam illum alias, totam quo delectus sapiente quisquam animi dicta. Sequi est dolorum repellat ipsam, ipsum mollitia nobis! Sequi tenetur perspiciatis odit. ipsum dolor sit amet, consectetur adipisicing elit. Pariatur porro perspiciatis repellendus eaque. A sed beatae soluta, doloribus, pariatur necessitatibus. Nemo laudantium labore quia excepturi nihil vero nulla odio, optio. ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eligendi modi nulla ipsa quae fugiat non illum numquam, dolor ipsam hic ut ad fuga rem error architecto doloribus harum, debitis.</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>col-sm-4</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, hic illo accusantium maxime voluptatibus architecto officiis deserunt dolore veritatis ab odio, non explicabo sapiente, molestiae asperiores ex quo neque optio. ipsum dolor sit amet, consectetur adipisicing elit. Illum numquam totam quia, dolore, velit eius iure nisi odio quo aut impedit libero dignissimos ullam, mollitia exercitationem dolorum dolor delectus quidem. ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quos dolorem, aliquid! Reiciendis voluptatum doloremque nulla praesentium molestias qui iure dolorum modi rerum magnam nam perferendis quidem ad, voluptates reprehenderit!</p>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm-8">
+        <h3>col-sm-8</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eligendi modi nulla ipsa quae fugiat non illum numquam, dolor ipsam hic ut ad fuga rem error architecto doloribus harum, debitis.</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>col-sm-4</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quos dolorem, aliquid! Reiciendis voluptatum doloremque nulla praesentium molestias qui iure dolorum modi rerum magnam nam perferendis quidem ad, voluptates reprehenderit!</p>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm">
+        <h3>col-sm</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rem nesciunt et commodi, mollitia sequi delectus amet rerum vitae est beatae saepe aspernatur ut quam porro perferendis blanditiis, dolore alias.</p>
+    </div>
+      <div class="col-sm">
+        <h3>col-sm</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
+      </p>
+    </div>
+      <div class="col-sm">
+        <h3>col-sm</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima temporibus sequi praesentium unde delectus aut animi itaque accusamus suscipit incidunt rem id minus, eos sed ab similique voluptate modi distinctio.</p>
+    </div>
+  </div>
+
+
+</div> <!-- end container -->
 
 
 
