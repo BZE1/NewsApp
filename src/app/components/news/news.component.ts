@@ -68,7 +68,7 @@ export class NewsComponent implements OnInit {
 
                      // LOOP
                 for(let i=0; i< 10; i++) {
-                        console.log("i = "i);
+                        console.log("i = " +i);
                         this.parsedNewsData.push(this.newsData[i]);
                         console.log(this.newsData[i]);
                         // rawJSON.items.push(this.newsoutput1[i]);
