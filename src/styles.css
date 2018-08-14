@@ -2,11 +2,19 @@ body{
 	padding-top: 70px;
 	padding-bottom: 70px;
 	background-color: white;
+    font-family: Arial,Helvetica,sans-serif;
+    overflow-x: auto;
+    overflow-y: scroll;
     /*background-color: magenta;*/
+    background-image: url("https://www.patternpictures.com/wp-content/uploads/2018/01/white-texture-background-geometric-pattern-180126.jpg");
+    /*background-image: url("https://www.patternpictures.com/wp-content/uploads/2018/01/white-texture-background-geometric-pattern-180126.jpg");*/
 
+    /*background-image: url("https://img.freepik.com/free-vector/wrinkled-paper-texture_1100-12.jpg?size=338c&ext=jpg");*/
     /*background-image: url("https://thumbs.gfycat.com/ThickDesertedHarrier-size_restricted.gif");*/
     /*background-image: url("img_tree.gif"), url("paper.gif");*/
     /*background-image: url("https://thumbs.gfycat.com/ZestyLoathsomeGermanpinscher-size_restricted.gif"), url("https://www.noupe.com/wp-content/uploads/2017/10/bubblydefault.gif");*/
+
+
 
 }
 
@@ -41,11 +49,13 @@ button:hover{
 }
 
 #zx_Header_color {
-    color: white;
+    color: red;
 }
 .zx-color{
-    background-color: green;
-
+    background-image: url("https://www.cg-source.com/ui/news_hdritimelapse_0200-02.gif");
+    /*background-position: center;*/
+    /*background-color: green;*/
+     /*background-image: url("img_tree.gif"), url("paper.gif");*/
     /*background-color: purple;*/
 }
 
