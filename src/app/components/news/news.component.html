@@ -1,36 +1,39 @@
 <div class="zx-nav"  style="text-align:center">
-<nav class="navbar navbar-brand navbar-dark fixed-top zx-color">
-   
-        <h4 id="zx_Header_color">Main News Page</h4>
-   
-<div class="container">
-  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+	<nav class="navbar navbar-brand navbar-dark fixed-top zx-color">
+	   	        <h4 id="zx_Header_color">Main News Page</h4>
+	   
+		<div class="container">
 
-    <button type="button" class="btn btn-info" routerLink="login">    Login</button>
-    <button type="button" class="btn btn-info" routerLink="register">    Register</button>
-    <button type="button" class="btn btn-info" routerLink="user/:uid/news">    News</button>
-    <button type="button" class="btn btn-info">Links</button>
-    <button type="button" class="btn btn-info">About</button>
-    <button type="button" class="btn btn-warning"  (click)="logout()"routerLink="/">Logout</button>
-    <button type="button" class="btn btn-warning" routerLink="/user">Profile</button>
-    
-    <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        [ More ]
-      </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
-        <a class="dropdown-item" routerLink="register">Register</a>
-        <a class="dropdown-item" href="#">Dropdown link</a>
-       
-      </div>
-    </div>
-  </div>
-</div>  
-	
-</nav>
+		  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+
+			<!-- ====================BUTTONS================ -->
+		    <button type="button" class="btn btn-info" routerLink="login">    Login</button>
+		    <button type="button" class="btn btn-info" routerLink="register">    Register</button>
+		    <button type="button" class="btn btn-info" routerLink="user/:uid/news">    News</button>
+		    <button type="button" class="btn btn-info">Links</button>
+		    <button type="button" class="btn btn-info">About</button>
+		    <button type="button" class="btn btn-info"  (click)="logout()"routerLink="/">Logout</button>
+		    <button type="button" class="btn btn-info" routerLink="/user">Profile</button>
+		    
+		    <!-- ====================Droopdown================ -->
+		    <div class="btn-group" role="group">
+		          <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        [ More ]
+		      </button>
+
+			     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+
+			      <!--   <a class="dropdown-item" href="#">Dropdown link</a>
+			        <a class="dropdown-item" href="#">Dropdown link</a>
+			        <a class="dropdown-item" href="#">Dropdown link</a>
+			        <a class="dropdown-item" routerLink="register">Register</a>
+			        <a class="dropdown-item" href="#">Dropdown link</a> -->
+			      
+			     </div>
+		    </div>
+		  </div>
+		</div>  <!-- end Container -->
+	</nav>
 
 </div>
 
@@ -43,18 +46,11 @@
 
 
 <div style="text-align:center">
-  <!-- <h1>      {{ title }}    </h1> -->
- <!--  <img width="300" alt="Center Image" src="https://kimbersoft.com/PLR/GrowthMindset/RedArrow.gif">
-  <br>
-  <img width="200" height="200" alt="Center Image" src="https://i.giphy.com/media/3ohs88bcBbid83GaIg/source.gif"> -->
-
-
-  <!-- <img width="300" alt="Center Image" src="http://the-secret-to-success.org/wp-content/uploads/2010/08/Key-to-Success.gif"> -->
 
 </div>
 
 <!--########################################################-->
-<!--#############[        CARDs              ]############-->
+<!--#############[      BUTTON GROUPS         ]############-->
 <!--########################################################-->
 <div class="container">
 
@@ -66,19 +62,19 @@
 
     </div>
     <div class="btn-group mr-2" role="group" aria-label="Second group">
-      <button type="button" class="btn btn-warning">Button # 4</button>
-      <button type="button" class="btn btn-warning">Button # 5</button>
-      <button type="button" class="btn btn-warning">Button # 6</button>
+      <button type="button" class="btn btn-warning">Button # 1</button>
+      <button type="button" class="btn btn-warning">Button # 2</button>
+      <button type="button" class="btn btn-warning">Button # 3</button>
       
     </div>
     <div class="btn-group" role="group" aria-label="Third group">
-      <button type="button" class="btn btn-warning">Button # 7</button>
+   <!--    <button type="button" class="btn btn-warning">Button # 7</button>
       <button type="button" class="btn btn-warning">Button # 8</button>
-      <button type="button" class="btn btn-warning">Button # 9</button>
+      <button type="button" class="btn btn-warning" >Button # 9</button> -->
     </div>
      
   </div>
-</div>
+</div>   <!-- [END CONTAINER] -->
 
 <!--########################################################-->
 <!--#############[          Buttons            ]############-->
@@ -95,7 +91,7 @@
 
 
 <!--########################################################-->
-<!--#############[         social Icons        ]############-->
+<!--#############[      SOCIAL ICONS       ]############-->
 <!--########################################################-->
 <div class="zx-center" >
 
@@ -129,132 +125,98 @@
                 Email
                 </a>  
     </span>  
-</div>
-
+</div>  <!-- [END CONTAINER] -->
+</div>  <!-- [END ZX CENTER] -->
 
 
 <!--########################################################-->
-<!--#############[        entry Page            ]############-->
+<!--#############[        TEST BUTTON      ]############-->
 <!--########################################################-->
 
 
-<div>
-	  <button      type="button" 
-                   class="btn btn-primary" 
-                   (click)="getNewsSports()">
-        			[ News Test]
-      				</button>
-     <div>
-	<!-- <div *ngFor="let news of parsedNewsData"> -->
-	<div *ngFor="let news of newsData">
-          
-          <!--  <a href="{{news.url}}" target="_blank" >
-           Item: {{news.items.title}}   Title:  {{news.title}}</a> -->
-          
-          
-          	<!-- <h3>Title: {{news.items.title}}</h3> 
-          	<p>description: {{news.title.description}}</p> -->
+  
 
-         <!--  	<h3>{{news.title}}</h3>
-               <p>{{news.description}}</p> -->
-    </div>   
-
-
-	      <!--   <div>
-	              <ul>
-	                <li *ngFor="let item of testdata">
-	                  <p><b>Name : {{item.name}}</b></p>
-	                  <p>Username : {{item.username}}</p>
-	                  <p>Email :  {{item.email}}</p>
-	                  <p>Website:  {{item.website}}</p>
-	                  <p>Info:  {{item.company.catchPhrase}}</p>
-	                  <p>LAT :  {{item.address.geo.lat}}</p>
-	                  <p>LNG:  {{item.address.geo.lng}}</p>
-	                </li>
-	              </ul>
-	        </div>    -->
-</div>
 
 <!--########################################################-->
-
-<!--########################################################-->
-<!--#############[         social Icons        ]############-->
+<!--#############[     3 Block Container     ]############-->
 <!--########################################################-->
 
 
+<!-- <div class="container"> -->
 <div class="container-fluid">
- 
-  <div class="row">
-        <div class="col-sm">
-          <h3>col-sm</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas tenetur inventore ea molestiae reiciendis, obcaecati aperiam dolorem deleniti ullam dolorum officia ratione quas aliquid ipsa provident id assumenda dignissimos. Quo.</p>
-        
-      </div>
-        <div class="col-sm">
-          <h3>col-sm</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
-        </p>
-      </div>
-        <div class="col-sm">
-          <h3>col-sm</h3>
-       <p>Lorem ipsum dolor sit amet, consectetur alias.</p>
-        <!-- <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-                      width="360" 
-                      height="235" 
-                      frameborder="0"
-                      allowfullscreen
-                      allow="autoplay; encrypted-media">
-                      </iframe> -->
-      </div>
-</div>
-
-<div class="row">
-      <div class="col-sm-8">
-        <h3>col-sm-8</h3>
-       <!--  <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-                    width="360" 
-                    height="235" 
-                    frameborder="0"
-                    allowfullscreen
-                    allow="autoplay; encrypted-media">
-                    </iframe> -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam illum alias, totam quo delectus sapiente quisquam animi dicta. Sequi est dolorum repellat ipsam, ipsum mollitia nobis! Sequi tenetur perspiciatis odit. ipsum dolor sit amet, consectetur adipisicing elit. Pariatur porro perspiciatis repellendus eaque. A sed beatae soluta, doloribus, pariatur necessitatibus. Nemo laudantium labore quia excepturi nihil vero nulla odio, optio. ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eligendi modi nulla ipsa quae fugiat non illum numquam, dolor ipsam hic ut ad fuga rem error architecto doloribus harum, debitis.</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>col-sm-4</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, hic illo accusantium maxime voluptatibus architecto officiis deserunt dolore veritatis ab odio, non explicabo sapiente, molestiae asperiores ex quo neque optio. ipsum dolor sit amet, consectetur adipisicing elit. Illum numquam totam quia, dolore, velit eius iure nisi odio quo aut impedit libero dignissimos ullam, mollitia exercitationem dolorum dolor delectus quidem. ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quos dolorem, aliquid! Reiciendis voluptatum doloremque nulla praesentium molestias qui iure dolorum modi rerum magnam nam perferendis quidem ad, voluptates reprehenderit!</p>
-      </div>
-  </div>
-
-  <div class="row">
-      <div class="col-sm-8">
-        <h3>col-sm-8</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eligendi modi nulla ipsa quae fugiat non illum numquam, dolor ipsam hic ut ad fuga rem error architecto doloribus harum, debitis.</p>
-      </div>
-      <div class="col-sm-4">
-        <h3>col-sm-4</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quos dolorem, aliquid! Reiciendis voluptatum doloremque nulla praesentium molestias qui iure dolorum modi rerum magnam nam perferendis quidem ad, voluptates reprehenderit!</p>
-      </div>
-  </div>
-
-  <div class="row">
-      <div class="col-sm">
-        <h3>col-sm</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rem nesciunt et commodi, mollitia sequi delectus amet rerum vitae est beatae saepe aspernatur ut quam porro perferendis blanditiis, dolore alias.</p>
-    </div>
-      <div class="col-sm">
-        <h3>col-sm</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
-      </p>
-    </div>
-      <div class="col-sm">
-        <h3>col-sm</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima temporibus sequi praesentium unde delectus aut animi itaque accusamus suscipit incidunt rem id minus, eos sed ab similique voluptate modi distinctio.</p>
-    </div>
-  </div>
+			<!-- ======================================================== -->
+	   <div class="row">
 
 
-</div> <!-- end container -->
+			<!-- ======================================================== -->
+	        <div class="col-sm">
+
+	        	<h4><B>Top Stories</B></h4>
+				<p></p>
+			        <div *ngFor="let news of parsedNewsData">
+					
+						<p><b>{{news.title}}</b></p>
+						<p>{{news.content}}</p>
+						
+					</div>
+				
+
+	     </div>  
+			<!-- ======================================================== -->
+	      <div class="col-sm">
+
+	        	<h4><B>Business and Finance</B></h4>
+
+				        <div *ngFor="let newsMoney of parsedNewsMoneyData">
+							<p></p>
+							<p><b>{{newsMoney.title}}</b></p>
+							<p>{{newsMoney.content}}</p>
+
+						</div>
+						<p>Stay tuned there is more to Come</p>
+	      </div> 
+			<!-- ======================================================== -->
+	      <div class="col-sm">
+
+	        	<h4><B>Technogoly</B></h4>
+						<p><b></b></p>
+			            <div *ngFor="let tech of parsedNewsTechData">
+							<p><b>{{tech.title}}</b></p>
+							<p>{{tech.content}}</p>
+							
+						</div>
+						<p>Stay tuned there is more to Come</p>
+
+			</div>
+			<!-- ======================================================== -->
+
+	 </div> <!--  [end row] -->
+			<!-- ======================================================== -->
+
+
+
+<!--########################################################-->
+<!--#############[     3 Block Container       ]############-->
+<!--########################################################-->
+
+ <div class="row">
+	      <div class="col-sm">
+	        <h3>col-sm</h3>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rem nesciunt et commodi, mollitia sequi delectus amet rerum vitae est beatae saepe aspernatur ut quam porro perferendis blanditiis, dolore alias.</p>
+	    </div>
+	      <div class="col-sm">
+	        <h3>col-sm</h3>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolorum odio quia reprehenderit, tempore illum quis, perspiciatis eos, laudantium quidem iste labore consequuntur necessitatibus nulla odit. Quaerat vero eligendi voluptas!
+	      </p>
+	    </div>
+	      <div class="col-sm">
+	        <h3>col-sm</h3>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima temporibus sequi praesentium unde delectus aut animi itaque accusamus suscipit incidunt rem id minus, eos sed ab similique voluptate modi distinctio.</p>
+	    </div>
+	  </div>
+
+
+</div> <!-- [END CONTAINER] -->
 
 
 
@@ -266,12 +228,9 @@
 	  <div class="wrapper" style="text-align:center">
 
 			  <div id="ex_1"> 
-			      <h3>Lets get you better</h3>
+			      <h3>Happy Monday</h3>
 			      <!-- <h3>{{dynamic}}</h3> -->
-			      <p>Lorem ipsum 
-			      </p>
-			      <!-- <h3>{{ title2 }}</h3> -->
-
+			     
 			      <img    width="300" 
 			              alt="Giffy Logo" 
 			              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
@@ -279,29 +238,19 @@
 
 
 				  <div id="ex_2"> 
-				      <h3>How can we help</h3>
-				      <p>Lorem ipsum
+				      <h3>We use APIs</h3>
+				      <p>We use APIs for data !
 				      </p>
-				      <!-- <h3>{{ title1 }}</h3> -->
-
-				      <img    width="300" 
+					 <img    width="300" 
 				              alt="Giffy Logo" 
 				              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
 				  </div>
 
 				  <div id="ex_3"> 
-				      <h3>Where to go</h3>
-				      <p>Lorem ipsum
+				      <h3>This Block Blank</h3>
+				      <p>Nothing was put here because 
 				      </p>
-				      <!-- <h3>{{ title3 }}</h3> -->
-
-				     <!--  <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-				                width="360" 
-				                height="235" 
-				                frameborder="0"
-				                allowfullscreen
-				                allow="autoplay; encrypted-media">
-				                </iframe> -->
+				    
 				</div>
 
 		</div> <!-- [end wrapper] -->
@@ -318,18 +267,29 @@
 		<div class="wrapper" style="text-align:center">
 
 			  <div id="ex_4"> 
-			      <h3>Header info 1</h3>
-			      <p>Lorem ipsum</p>
+			      <h5><B>[ Top Stories ]</B></h5>
+			        <div *ngFor="let news of parsedNewsData">
+						<p>{{news.title}}</p>
+						<p>{{news.content}}</p>
+					</div>
+			     
 			</div>
 
 			  <div id="ex_5"> 
-			      <h3>Header info 2</h3>
-			      <p>Lorem ipsum</p>
+			  	<h5><B>[ Business and Finance ]</B></h5>
+
+				        <div *ngFor="let newsMoney of parsedNewsMoneyData">
+							<p></p>
+							<p>{{newsMoney.title}}</p>
+							<p>{{newsMoney.content}}</p>
+
+						</div>
+					<p>Stay tuned there is more to Come !</p>
 			</div>
 
 			 <div id="ex_6"> 
-			      <h3>Header info 3</h3>
-			      <p>Lorem ipsum</p>
+			      <h3>Static Text</h3>
+			      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ea earum, deserunt nihil autem facere, sapiente ullam explicabo, neque vel consequatur ex cupiditate architecto id ipsa? Optio commodi quis accusamus? ipsum dolor sit amet, consectetur adipisicing elit. Quos atque libero non voluptates quasi nobis esse veniam, sed impedit, cum sint at, consectetur facere, voluptatibus! Esse, aliquam excepturi architecto aliquid. ipsum</p>
 			</div>
 
 		</div> <!-- [end wrapper] -->
@@ -341,38 +301,33 @@
 	<div class="wrapper" style="text-align:center">
 
 			  <div id="ex_1"> 
-			      <h3>Lets get you better</h3>
-			      <!-- <h3>{{dynamic}}</h3> -->
-			      <p>Lorem ipsum 
-			      </p>
-			      <!-- <h3>{{ title2 }}</h3> -->
-
-			      <img    width="300" 
-			              alt="Giffy Logo" 
-			              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
+			      <h3>Youtube Live</h3>
+			      <p>Bloomberg</p>
+				<iframe width="350" height="200" 
+						src="https://www.youtube.com/embed/Ga3maNZ0x0w" 
+						frameborder="0" allow="autoplay; encrypted-media" 
+						allowfullscreen>
+						</iframe>		      
 			    </div>
 
 
 			  <div id="ex_2"> 
-			      <h3>How can we help</h3>
-			      <p>Lorem ipsum
-			      </p>
-			      <!-- <h3>{{ title1 }}</h3> -->
-
-			      <img    width="300" 
-			              alt="Giffy Logo" 
-			              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
+			      <h3>NASA Live</h3>
+			      <p>ISS Above the earth </p>
+			     
+					<iframe width="350" height="200" 
+							src="https://www.youtube.com/embed/RtU_mdL2vBM" 
+							frameborder="0" allow="autoplay; encrypted-media"
+							 allowfullscreen>
+							 </iframe>
 			  </div>
 
 			  <div id="ex_3"> 
-			      <h3>Where to go</h3>
-			      <p>Lorem ipsum
-			      </p>
-			      <!-- <h3>{{ title3 }}</h3> -->
-
+			      <h3>Dont Give UP</h3>
+			      <p>Just another Video	</p>
 			      <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-			                width="360" 
-			                height="235" 
+			                width="350" 
+			                height="200" 
 			                frameborder="0"
 			                allowfullscreen
 			                allow="autoplay; encrypted-media">
@@ -392,20 +347,7 @@
 
 		<div class="wrapper" style="text-align:center">
 
-			  <div id="ex_4"> 
-			      <h3>Header info 1</h3>
-			      <p>Lorem ipsum</p>
-			</div>
-
-			  <div id="ex_5"> 
-			      <h3>Header info 2</h3>
-			      <p>Lorem ipsum</p>
-			</div>
-
-			 <div id="ex_6"> 
-			      <h3>Header info 3</h3>
-			      <p>Lorem ipsum</p>
-			</div>
+			
 
 		</div> <!-- [end wrapper] -->
 
@@ -414,61 +356,7 @@
 <!-- <div class="container-fluid"> -->
 	<div class="wrapper" style="text-align:center">
 
-		  <div id="ex_1"> 
-		      <h3>Lets get you better</h3>
-		      <!-- <h3>{{dynamic}}</h3> -->
-		      <p>Lorem ipsum 
-		      </p>
-		      <!-- <h3>{{ title2 }}</h3> -->
-
-		      <img    width="300" 
-		              alt="Giffy Logo" 
-		              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
-		    </div>
-
-
-		  <div id="ex_2"> 
-		      <h3>How can we help</h3>
-		      <p>Lorem ipsum
-		      </p>
-		      <!-- <h3>{{ title1 }}</h3> -->
-
-		      <img    width="300" 
-		              alt="Giffy Logo" 
-		              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
-		  </div>
-
-		  <div id="ex_3"> 
-		      <h3>Where to go</h3>
-		      <p>Lorem ipsum
-		      </p>
-		      <!-- <h3>{{ title3 }}</h3> -->
-
-		      <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-		                width="360" 
-		                height="235" 
-		                frameborder="0"
-		                allowfullscreen
-		                allow="autoplay; encrypted-media">
-		                </iframe>
-		</div>
-
-
-					 <div id="ex_4"> 
-					      <h3>Header info 1</h3>
-					      <p>Lorem ipsum</p>
-					</div>
-
-					  <div id="ex_5"> 
-					      <h3>Header info 2</h3>
-					      <p>Lorem ipsum</p>
-					</div>
-
-					 <div id="ex_6"> 
-					      <h3>Header info 3</h3>
-					      <p>Lorem ipsum</p>
-					</div>
-
+		
 
 	</div> <!-- [end wrapper] -->
 
@@ -480,66 +368,58 @@
 
 			  <div id="ex_1"> 
 			      <h3>Lets get you better</h3>
-			      <!-- <h3>{{dynamic}}</h3> -->
-			      <p>Lorem ipsum 
-			      </p>
-			      <!-- <h3>{{ title2 }}</h3> -->
-
-			      <img    width="300" 
-			              alt="Giffy Logo" 
-			              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
+			      <div *ngFor="let tech of parsedNewsTechData">
+							<p><b>{{tech.title}}</b></p>
+							<p>{{tech.content}}</p>
+							
+						</div>
+			      
 			    </div>
 
 
 			  <div id="ex_2"> 
-			      <h3>How can we help</h3>
-			      <p>Lorem ipsum
-			      </p>
+			     <div *ngFor="let newsMoney of parsedNewsMoneyData">
+							<p></p>
+							<p><b>{{newsMoney.title}}</b></p>
+							<p>{{newsMoney.content}}</p>
+
+						</div>
 			      <!-- <h3>{{ title1 }}</h3> -->
 
-			      <img    width="300" 
-			              alt="Giffy Logo" 
-			              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
+			      
 			  </div>
 
 			  <div id="ex_3"> 
-			      <h3>Where to go</h3>
-			      <p>Lorem ipsum
-			      </p>
-			      <!-- <h3>{{ title3 }}</h3> -->
-
-			      <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-			                width="360" 
-			                height="235" 
-			                frameborder="0"
-			                allowfullscreen
-			                allow="autoplay; encrypted-media">
-			                </iframe>
+			      <h5><B>[ Top Stories ]</B></h5>
+			        <div *ngFor="let news of parsedNewsData">
+						<p>{{news.title}}</p>
+						<p>{{news.content}}</p>
+					</div>
 			</div>
 
 	</div> <!-- [end wrapper] -->
 
-		<div class="image_wrapper" >
+	<div class="image_wrapper" >
 
-		</div>
+	</div>
 		<!-- </div> -->
 
 
 		<div class="wrapper" style="text-align:center">
 
 		  <div id="ex_4"> 
-		      <h3>Header info 1</h3>
-		      <p>Lorem ipsum</p>
+		      <h3>Just another box</h3>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam voluptatum iusto eaque quas maiores voluptatibus, suscipit cum officiis. Doloribus, dolorem praesentium, consequatur in sit ducimus tenetur enim veniam impedit. ipsum</p>
 		</div>
 
 		  <div id="ex_5"> 
-		      <h3>Header info 2</h3>
-		      <p>Lorem ipsum</p>
+		      <h3>Lorem ipsum dolor</h3>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam tempore atque aliquid voluptatibus officiis asperiores libero aut suscipit nesciunt at id sit debitis, aperiam perferendis quis provident vel sapiente illo. ipsum dolor sit amet, consectetur adipisicinge optio vero odit veritatis ut cumque iste voluptatum error? ipsum</p>
 		</div>
 
 		 <div id="ex_6"> 
-		      <h3>Header info 3</h3>
-		      <p>Lorem ipsum</p>
+		      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, deserunt doloremque ut molestias quae p</h3>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nostrum voluptatem, itaque iusto maxime accusamus minima esse ad! Modi suscipit necessitatibus quasi ullam odio praesentium sunt labore. Magnam, earum consequuntur! ipsum</p>
 		</div>
 
 		</div> <!-- [end wrapper] -->
@@ -547,115 +427,38 @@
 
 <div class="wrapper" style="text-align:center">
 
-			  <div id="ex_1"> 
-			      <h3>Lets get you better</h3>
-			      <!-- <h3>{{dynamic}}</h3> -->
-			      <p>Lorem ipsum 
-			      </p>
-			      <!-- <h3>{{ title2 }}</h3> -->
-
-			      <img    width="300" 
-			              alt="Giffy Logo" 
-			              src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif">
-			    </div>
-
-
-			  <div id="ex_2"> 
-			      <h3>How can we help</h3>
-			      <p>Lorem ipsum
-			      </p>
-			      <!-- <h3>{{ title1 }}</h3> -->
-
-			      <img    width="300" 
-			              alt="Giffy Logo" 
-			              src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif">
-			  </div>
-
-			  <div id="ex_3"> 
-			      <h3>Where to go</h3>
-			      <p>Lorem ipsum
-			      </p>
-			      <!-- <h3>{{ title3 }}</h3> -->
-
-			      <iframe   src="https://www.youtube.com/embed/izIFLbFXuC4" 
-			                width="360" 
-			                height="235" 
-			                frameborder="0"
-			                allowfullscreen
-			                allow="autoplay; encrypted-media">
-			                </iframe>
-			</div>
+			
 
 	</div> <!-- [end wrapper] -->
-<!-- <div class="container-fluid"> -->
+
 
 		<div class="wrapper" style="text-align:center">
 
-		  <div id="ex_4"> 
-		      <h3>Header info 4</h3>
-		      <p>Lorem ipsum</p>
-		</div>
-
-		  <div id="ex_5"> 
-		      <h3>Header info 5</h3>
-		      <p>Lorem ipsum</p>
-		</div>
-
-		 <div id="ex_6"> 
-		      <h3>Header info 6</h3>
-		      <p>Lorem ipsum</p>
-		</div>
+		  
 
 		</div> <!-- [end wrapper] -->
 
-<!-- </div>  [end container fluid] -->
 
 
 
 <div style="text-align:center">
 
-		  <!-- <h3>{{ title1}}</h3> -->
-		  <img  src="https://raw.githubusercontent.com/Giphy/GiphyAPI/master/api_giphy_header.gif"
-		        width="300" 
-		        alt="Giffy Logo" >
-
-		  <!-- <h3>{{ title2}}</h3> -->
-		  <img  src="https://www.crowdspring.com/blog/wp-content/uploads/2016/08/tumblr_mf5ylr5ZkW1r6mnq4o1_1280.gif"
-		        width="300" 
-		        alt="Giffy Logo" >
-
-		  <!-- <h3>{{ title3}}</h3> -->
-		  <iframe src="https://www.youtube.com/embed/izIFLbFXuC4"
-		          width="360" 
-		          height="235"  
-		          frameborder="0" 
-		          allow="autoplay; encrypted-media" 
-		          allowfullscreen>
-		          </iframe>
+	
 
 		  
 
 
 		<div class="zx-center" style="text-align:center">
-		  
+		  <br><br>
 
 
 
 		     <button   type="submit" 
-		               class="btn btn-primary ">
+		               class="btn btn-primary "
+		               (click)="ngOnInit()">
 		                Reload
 		                </button>
-		                              <!-- routerLink="/user/{{uid}}/website"> -->
-		  
-		      <button   type="submit" 
-		               class="btn btn-primary ">
-		                Crap !
-		                </button>
-
-		        <a href="/user">
-		  <button class="btn btn-success" >
-		            Top of the page
-		            </button></a>        
+		          
 		  
 		</div>
   

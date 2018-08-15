@@ -29,75 +29,113 @@ export class NewsComponent implements OnInit {
               private http: Http) { }
 
   ngOnInit() {
+    this.getNewsSports();
+    this.getNewsMoney();
+    this.getNewsMTech();
   }
 
 
    logout() {
+       
         this.userService.logout().subscribe(
           (data: any) => {
+            
             this.router.navigate(['/login'])
           }
        );
-
+        
   }
 
 
-    // rssURL = "https://api.rss2json.com/v1/api.json?rss_url="
-    newsData: any[];
-    parsedNewsData: any[] = [];
-    newsDataAny: any;
-    newsoutput1: any;
-    newsoutput2:  any;
+   codetest: any;
 
-    getNewsSports(){
-       
-        this.http.get('https://api.rss2json.com/v1/api.json?rss_url=https://abcnews.go.com/abcnews/topstories' )
-            .subscribe (
-                (res:Response) => {
-                console.log("Function = getNewsSports");
-                
-                 // this.newsDataAny = res.json();
-                 this.newsData = res.json();
-                 // console.log(res.json());
-                 // console.log(this.newsDataAny.items);
-                 console.log( this.parsedNewsData);
-
-                 // console.log(rawJSON.items[3].title);
-                 // this.newsoutput1 = rawJSON.items[3].title;
-                 // this.newsoutput2 = rawJSON.items[3].description;
-
-                     // LOOP
-                for(let i=0; i< 10; i++) {
-                        console.log("i = " +i);
-                        this.parsedNewsData.push(this.newsData[i]);
-                        console.log(this.newsData[i]);
-                        // rawJSON.items.push(this.newsoutput1[i]);
-                        // console.log(this.newsoutput1[i]);
-                }
-
-
-
-                 // LOOP
-                // for(let i=0; i< 10; i++) {
-                //     console.log(i);
-                //         this.parsedNewsData.push(this.newsData[i]);
-                // }
-             }    
-           )
+    testCode() {
+   
+      let codetest = 'button clicked';
     }
 
 
 
- // const rawJSON = res.json();
- //                 console.log (rawJSON);
- //                 this.output1 = rawJSON.people[0].name;
- //                 this.output2 = rawJSON.people[0].craft;
- //                 this.output3 = this.crap;
+    newsItemCat : any;
+    newsItem_1_Title: any;
+    newsItem_1_Content: any;
+
+    newsDataJson.items: any[] = [];
+    parsedNewsData: any[] = [];
+
+ getNewsSports(){
+       
+        this.http.get('https://api.rss2json.com/v1/api.json?rss_url=https://abcnews.go.com/abcnews/topstories' )
+            .subscribe (
+                (res:Response) => {
+
+                this.newsDataJson = res.json();
+                
+
+                 // --------------------------------------------
+                 // console.log("Function = " + newsDataJson.items[3].categories );
+                 // console.log("Function = " + newsDataJson.items[3].title);
+                 // console.log("Function = " + newsDataJson.items[3].content);
+
+                 // this.newsItemCat = newsDataJson.items[3].categories;
+                 // this.newsItem_1_Title = newsDataJson.items[3].title;
+                 // this.newsItem_1_Content = newsDataJson.items[3].content;
+                 // ------------------------------------------------
+                 
+                   // LOOP
+                for(let i=0; i< 5; i++) {
+                   
+                        this.parsedNewsData.push(this.newsDataJson.items[i]);
+                }
 
 
+               })
+        }
+
+    newsMoneyDataJson.items: any[] = [];
+    parsedNewsMoneyData: any[] = [];
+
+ getNewsMoney(){
+      
+        this.http.get('https://api.rss2json.com/v1/api.json?rss_url=https://abcnews.go.com/abcnews/moneyheadlines' )
+            .subscribe (
+                (res:Response) => {
+
+                this.newsMoneyDataJson = res.json();
+                
+
+                for(let i=0; i< 5; i++) {
+                    
+                        this.parsedNewsMoneyData.push(this. newsMoneyDataJson.items[i]);
+                }
 
 
+               })
+        }
 
+    newsTechDataJson.items: any[] = [];
+    parsedNewsTechData: any[] = [];
+
+ getNewsMTech(){
+       
+        this.http.get('https://api.rss2json.com/v1/api.json?rss_url=https://abcnews.go.com/abcnews/technologyheadlines' )
+            .subscribe (
+                (res:Response) => {
+
+                this.newsTechDataJson = res.json();
+               
+
+                for(let i=0; i< 5; i++) {
+                    
+                        this.parsedNewsTechData.push(this. newsTechDataJson.items[i]);
+                }
+
+
+               })
+        }
+
+
+  
 
 
 
