@@ -15,6 +15,8 @@ import {SharedService} from './services/shared.service.client'
 import {AuthGuard} from './services/auth-guard.service';
 import { NewsComponent } from './components/news/news.component';
 import { SplashComponent } from './components/splash/splash.component';
+import { AboutComponent } from './components/about/about.component';
+import { YoiuComponent } from './components/yoiu/yoiu.component';
 
 
 
@@ -26,6 +28,8 @@ import { SplashComponent } from './components/splash/splash.component';
     ProfileComponent,
     NewsComponent,
     SplashComponent,
+    AboutComponent,
+    YoiuComponent,
   ],
   imports: [
     BrowserModule,

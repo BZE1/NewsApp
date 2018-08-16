@@ -11,14 +11,19 @@
 <div class="container"  >
   <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 
+    <button type="button" class="btn btn-info" routerLink="/">Home</button>
     <button type="button" class="btn btn-info" routerLink="login"  >
     Login</button>
     <button type="button" class="btn btn-info" routerLink="register">
     Register</button>
     <button type="button" class="btn btn-info" routerLink="user/:uid/news">
     News</button>
-    <button type="button" class="btn btn-info">Links</button>
-    <button type="button" class="btn btn-info">About</button>
+
+            <button type="button" class="btn btn-info" routerLink="/about">About</button>
+        <button type="button" class="btn btn-info" routerLink="/yoiu">Yoiu</button>
+        
+   <!--  <button type="button" class="btn btn-info">Links</button>
+    <button type="button" class="btn btn-info">About</button> -->
     
 
     <div class="btn-group" role="group">
@@ -154,7 +159,7 @@
       <button      type="button" 
                    class="btn btn-primary" 
                    (click)="loopArticle()">
-        [ Done ]
+        List of Users
       </button>
           
 
@@ -311,7 +316,7 @@
               data-toggle="popover" 
               data-placement="bottom"
               (click)="randomQuote()" 
-              data-content="crap what now!">
+              data-content="This is just some  Popout (Bottom ) text in a box">
               [ Popover ]
               </button>
 </div>

@@ -60,7 +60,7 @@ export class NewsComponent implements OnInit {
     newsItem_1_Title: any;
     newsItem_1_Content: any;
 
-    newsDataJson.items: any[] = [];
+    newsDataJson: any;
     parsedNewsData: any[] = [];
 
  getNewsSports(){
@@ -71,18 +71,6 @@ export class NewsComponent implements OnInit {
 
                 this.newsDataJson = res.json();
                 
-
-                 // --------------------------------------------
-                 // console.log("Function = " + newsDataJson.items[3].categories );
-                 // console.log("Function = " + newsDataJson.items[3].title);
-                 // console.log("Function = " + newsDataJson.items[3].content);
-
-                 // this.newsItemCat = newsDataJson.items[3].categories;
-                 // this.newsItem_1_Title = newsDataJson.items[3].title;
-                 // this.newsItem_1_Content = newsDataJson.items[3].content;
-                 // ------------------------------------------------
-                 
-                   // LOOP
                 for(let i=0; i< 5; i++) {
                    
                         this.parsedNewsData.push(this.newsDataJson.items[i]);
@@ -92,7 +80,7 @@ export class NewsComponent implements OnInit {
                })
         }
 
-    newsMoneyDataJson.items: any[] = [];
+    newsMoneyDataJson;
     parsedNewsMoneyData: any[] = [];
 
  getNewsMoney(){
@@ -103,7 +91,6 @@ export class NewsComponent implements OnInit {
 
                 this.newsMoneyDataJson = res.json();
                 
-
                 for(let i=0; i< 5; i++) {
                     
                         this.parsedNewsMoneyData.push(this. newsMoneyDataJson.items[i]);
@@ -113,7 +100,7 @@ export class NewsComponent implements OnInit {
                })
         }
 
-    newsTechDataJson.items: any[] = [];
+    newsTechDataJson: any;
     parsedNewsTechData: any[] = [];
 
  getNewsMTech(){
