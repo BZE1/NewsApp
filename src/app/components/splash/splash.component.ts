@@ -209,10 +209,10 @@ export class SplashComponent implements OnInit {
 
 		this.outputDiv = this.outputH1tag + this.outputPtag;
 	 
-	 	this.testVar = `<h1> hi there !! </h1>`;
+	 	this.testVar = ``;
 
-	 	this.injectionTest1 = " [[ string 1 ]] sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero.";
-	 	this.injectionTest2 = " [[ string 2 ]] aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero. Illo, soluta  ";
+	 	this.injectionTest1 = " [[ Insert text 1 ]] sint! Culpa in aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero.";
+	 	this.injectionTest2 = " [[ Insert text 2 ]] aliquam ut consectetur nam illum eaque iste doloremque, aliquid, deleniti nemo dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, expedita, vero. Illo, soluta  ";
 
 	 	// this.outputDiv: 	`
 	  //   <h1>{{outputH1tag}}</h1>
